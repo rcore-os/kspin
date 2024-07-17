@@ -1,14 +1,5 @@
-//! `no_std` spin lock implementation that can disable kernel local IRQs or
-//! preemption while locking.
-//!
-//! # Cargo Features
-//!
-//! - `smp`: Use in the **multi-core** environment. For **single-core**
-//!   environment (without this feature), the lock state is unnecessary and
-//!   optimized out. CPU can always get the lock if we follow the proper guard
-//!   in use. By default, this feature is disabled.
-
 #![cfg_attr(not(test), no_std)]
+#![doc = include_str!("../README.md")]
 
 mod base;
 
